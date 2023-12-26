@@ -110,7 +110,7 @@ class Bot:
         reply_markup = ReplyKeyboardRemove()
         await update.message.reply_text("Guess champion")
         global a
-        a = Champions.get_champ(self.DB,"Master Yi")
+        a = Champions.get_random_champ(self.DB)
         logger.info("Started Classic game")
         logger.info("Random champion: %s", a)
         return GAME
